@@ -1,0 +1,19 @@
+spring:
+    application:
+        name: zero-protobuf-boot
+    kafka:
+        bootstrap-servers: 127.0.0.1:9092
+        consumer:
+            auto-commit-interval: 1000
+            auto-offset-reset: earliest
+            enable-auto-commit: true
+            group-id: test
+            key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+            value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        producer:
+            acks: 1
+            batch-size: 16384
+            buffer-memory: 33554432
+            key-serializer: org.apache.kafka.common.serialization.StringSerializer
+            retries: 0
+            value-serializer: org.apache.kafka.common.serialization.StringSerializer
